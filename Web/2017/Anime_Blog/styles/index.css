@@ -1,0 +1,61 @@
+#header {
+    text-align: left;
+}
+
+#header>.navigation {
+    height: 20px;
+    width: 768px;
+}
+
+#header .selected {
+    background-color: black;
+    color: white;
+    margin: auto;
+    text-align: center;
+    width: 100px;
+    height: 20px;
+}
+
+#header .unselected {
+    background-color: gray;
+    color: white;
+    margin: auto;
+    text-align: center;
+    width: 100px;
+    height: 20px;
+}
+
+#content {
+    text-align: center;
+}
+
+#content>.category {
+    text-align: right;
+    color: gray;
+}
+
+#content table {
+    border-collapse: collapse;
+    align-content: center;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+#content table,
+tr,
+td {
+    border: 1px solid gray;
+}
+
+#content .holiday {
+    color: red;
+}
+
+#footer {
+    text-align: center;
+}
+
+.crossLine {
+    color: gray;
+}
