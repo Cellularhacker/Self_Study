@@ -1,19 +1,27 @@
+/*
+taggs
+*/
+
+body {
+    font-family: sans-serif;
+}
+
+
+/*
+ids
+*/
+
 #header {
     text-align: left;
 }
 
-#header>.navigation {
-    height: 20px;
-    width: 768px;
+#header > h1 {
+    font-size: 3em;
 }
 
-#header a:active {
-    background-color: black;
-    color: white;
-    margin: auto;
-    text-align: center;
-    width: 100px;
+#header > .navigation {
     height: 20px;
+    width: 768px;
 }
 
 #header a:hover {
@@ -23,23 +31,27 @@
     text-align: center;
     width: 100px;
     height: 20px;
+    text-decoration: none;
 }
 
-#header a:link {
+#header > .current {
+    background-color: black;
+    color: white;
+    margin: auto;
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    text-decoration: none;
+}
+
+#header > .nonCurrent {
     background-color: gray;
     color: white;
     margin: auto;
     text-align: center;
     width: 100px;
     height: 20px;
-}
-
-#header a:visited {
-    color: white;
-    margin: auto;
-    text-align: center;
-    width: 100px;
-    height: 20px;
+    text-decoration: none;
 }
 
 #content {
@@ -59,9 +71,7 @@
     text-align: center;
 }
 
-#content table,
-tr,
-td {
+#content table, tr, td {
     border: 1px solid gray;
 }
 
@@ -72,6 +82,11 @@ td {
 #footer {
     text-align: center;
 }
+
+
+/*
+classes
+*/
 
 .crossLine {
     color: gray;

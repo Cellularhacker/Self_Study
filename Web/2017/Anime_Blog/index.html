@@ -9,17 +9,7 @@
 <head>
     <meta charset="utf-8">
     <title>Anime Blog</title>
-
-    <!-- Bootstrap importing-->
-    <link rel="stylesheet" type="text/css" href="styles/index.css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/index.css">
 </head>
 
 <body>
@@ -27,9 +17,9 @@
         <h1>애니 블로그</h1>
         <div class="caption">소드 아트 온라인, 액셀 월드, 작안의 샤나 리뷰 포스팅 전문 블로그</div>
         <div class="navigation" align="left">
-            <a href="./index.html">홈</a>
-            <a href="./sao.html">소드 아트 온라인</a>
-            <a href="./accelworld.html">액셀 월드</a>
+            <a href="./index.html" class="current">홈</a>
+            <a href="./sao.html" class="nonCurrent">소드 아트 온라인</a>
+            <a href="./accelworld.html" class="nonCurrent">액셀 월드</a>
         </div>
     </div>
     <div class="crossLine">
@@ -37,7 +27,7 @@
     </div>
     <div id="content">
         <div class="category">카테고리 > 홈</div>
-        <img src="./images/shana.jpg" alt="404 image not found" title="샤나">
+        <img src="./images/shana.jpg" alt="404 image not found" title="샤나" width="30%">
         <figcaption>
             &lt;&nbsp;샤나&nbsp;&gt;
         </figcaption>
