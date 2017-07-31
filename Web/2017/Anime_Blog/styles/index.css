@@ -14,16 +14,13 @@ ids
 #header {
     text-align: left;
 }
-
 #header > h1 {
     font-size: 3em;
 }
-
 #header > .navigation {
     height: 20px;
     width: 768px;
 }
-
 #header a:hover {
     background-color: black;
     color: white;
@@ -33,8 +30,7 @@ ids
     height: 20px;
     text-decoration: none;
 }
-
-#header > .current {
+#header .current {
     background-color: black;
     color: white;
     margin: auto;
@@ -43,8 +39,7 @@ ids
     height: 20px;
     text-decoration: none;
 }
-
-#header > .nonCurrent {
+#header .nonCurrent {
     background-color: gray;
     color: white;
     margin: auto;
@@ -57,24 +52,21 @@ ids
 #content {
     text-align: center;
 }
-
 #content>.category {
     text-align: right;
     color: gray;
 }
-
 #content table {
     border-collapse: collapse;
     align-content: center;
-    width: 60%;
+    width: 450px;
     margin: auto;
     text-align: center;
+    height: 150px;
 }
-
 #content table, tr, td {
     border: 1px solid gray;
 }
-
 #content .holiday {
     color: red;
 }
