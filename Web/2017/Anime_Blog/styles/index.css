@@ -17,8 +17,8 @@ ids
 #header > h1 {
     font-size: 3em;
 }
-#header > .navigation {
-    height: 20px;
+#header > #navigation {
+    height: 30px;
     width: 768px;
 }
 #header a:hover {
@@ -27,19 +27,22 @@ ids
     margin: auto;
     text-align: center;
     width: 100px;
-    height: 20px;
+    height: 30px;
     text-decoration: none;
 }
-#header .current {
+#header > #navigation .current {
     background-color: black;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+}
+#header > #navigation .current > a {
     color: white;
     margin: auto;
     text-align: center;
-    width: 100px;
-    height: 20px;
     text-decoration: none;
 }
-#header .nonCurrent {
+#header > #navigation .nonCurrent > a{
     background-color: gray;
     color: white;
     margin: auto;
