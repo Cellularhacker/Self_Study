@@ -1,0 +1,88 @@
+/*
+taggs
+*/
+
+body {
+    font-family: sans-serif;
+}
+
+
+/*
+ids
+*/
+
+#header {
+    text-align: left;
+}
+#header > h1 {
+    font-size: 3em;
+}
+#header > #navigation {
+    height: 30px;
+    width: 768px;
+}
+#header a:hover {
+    background-color: black;
+    color: white;
+    margin: auto;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    text-decoration: none;
+}
+#header > #navigation .current {
+    background-color: black;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+}
+#header > #navigation .current > a {
+    color: white;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+}
+#header > #navigation .nonCurrent > a{
+    background-color: gray;
+    color: white;
+    margin: auto;
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    text-decoration: none;
+}
+
+#content {
+    text-align: center;
+}
+#content > .category {
+    text-align: right;
+    color: gray;
+}
+#content > .timestamp {
+    text-align: right;
+    color: gray;
+    font-size: 0.9em;
+}
+
+.contentTitle {
+    color: red;
+}
+.cinc {
+    font-size: 0.8em;
+    color: lightslategray;
+}
+
+#footer {
+    text-align: center;
+    font-size: 0.9em;
+}
+
+
+/*
+classes
+*/
+
+.crossLine {
+    color: gray;
+}
