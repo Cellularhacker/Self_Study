@@ -55,27 +55,27 @@ ids
 #content {
     text-align: center;
 }
-#content>.category {
+#content > .category {
     text-align: right;
     color: gray;
 }
-#content table {
-    border-collapse: collapse;
-    align-content: center;
-    width: 450px;
-    margin: auto;
-    text-align: center;
-    height: 150px;
+#content > .timestamp {
+    text-align: right;
+    color: gray;
+    font-size: 0.9em;
 }
-#content table, tr, td {
-    border: 1px solid gray;
+
+.contentTitle {
+    color: blue;
 }
-#content .holiday {
-    color: red;
+.cinc {
+    font-size: 0.8em;
+    color: lightslategray;
 }
 
 #footer {
     text-align: center;
+    font-size: 0.9em;
 }
 
 
