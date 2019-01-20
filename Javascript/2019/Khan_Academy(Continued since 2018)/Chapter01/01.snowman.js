@@ -5,7 +5,7 @@
 * Writer: Cellularhacker
 * Project: SELF_STUDY/Javascript/2019/Khan_Academy
 * Chapter: No.1
-* filename: snowman.js
+* filename: 01.snowman.js
 * License: GNU General Public License v3.0
 */
 
