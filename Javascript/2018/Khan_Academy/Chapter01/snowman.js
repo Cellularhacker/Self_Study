@@ -2,7 +2,7 @@
 /*
 * Date: 2018-04-29 12:55 KST
 * Writer: Cellularhacker
-* Project: SELF_STUDY/Javascript/20018/Khan_Academy
+* Project: SELF_STUDY/Javascript/2018/Khan_Academy
 * Chapter: No.1
 * filename: snowman.js
 * License: GNU General Public License v3.0
