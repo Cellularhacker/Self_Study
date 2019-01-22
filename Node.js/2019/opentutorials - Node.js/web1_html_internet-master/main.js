@@ -13,6 +13,7 @@ function templateHTML(title, list, body){
     <body>
       <h1><a href="/">WEB</a></h1>
       ${list}
+      <a href="/create">create</a>
       ${body}
     </body>
     </html>
@@ -59,6 +60,27 @@ var app = http.createServer(function(request,response){
             response.writeHead(200);
             response.end(template);
           });
+        });
+      }
+    } else if(pathname === '/create'){
+      if(queryData.id === undefined){
+        fs.readdir('./data', function(error, filelist){
+          var title = 'WEB - create';
+          var list = templateList(filelist);  // filelist 출력
+          var template = templateHTML(title, list, `
+            <form action="http://localhost:3000/create_process" method="post">
+              <p><input type="text" name="title" placeholder="title"></p>
+              <p>
+                  <textarea name="name" rows="8" cols="80" name="description" placeholder="description"></textarea>
+              </p>
+              <p>
+                  <input type="submit">
+              </p>
+            </form>
+          `); // template 출력
+
+          response.writeHead(200);
+          response.end(template);
         });
       }
     } else {
