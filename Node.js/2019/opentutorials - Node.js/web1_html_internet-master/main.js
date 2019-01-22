@@ -68,7 +68,9 @@ var app = http.createServer(function(request,response){
                   <input type="submit">
               </p>
             </form>
-          `); // template 출력
+          `,
+          ''
+        ); // template 출력
 
           response.writeHead(200);
           response.end(html);
@@ -126,9 +128,14 @@ var app = http.createServer(function(request,response){
         var id = post.id;
         var title = post.title;
         var description = post.description;
-        fs.rename(`data/${id}`, `data/${title}`, function(){
-          response.writeHead(302, {Location: `/?id=${title}`});
-          response.end();
+
+        var filteredId = path.parse(id).base;
+        fs.rename(`data/${filteredId}`, `data/${title}`, function(){
+          var fs = require('fs')
+          fs.writeFile(`data/${filteredId}`, description, 'utf8', function(err){
+            response.writeHead(302, {Location: `/?id=${title}`});
+            response.end();
+          });
         });
       });
     } else if(pathname === '/delete_process'){
