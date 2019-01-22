@@ -55,7 +55,15 @@ var app = http.createServer(function(request,response){
           fs.readdir('./data', function(error, filelist){
             var title = queryData.id;
             var list = templateList(filelist);  // filelist 출력
-            var template = templateHTML(title, list, `<h2>${title}</h2><p>${description}</p>`,`<a href="/create">create</a> <a href="/update?id=${title}">update</a>`); // template 출력
+            var template = templateHTML(title, list,
+              `<h2>${title}</h2><p>${description}</p>`,
+              `<a href="/create">create</a>
+               <a href="/update?id=${title}">update</a>
+               <form action="/delete_process" method="post">
+                <input type="hidden" name="id" value="${title}">
+                <input type="submit" value="delete">
+               </form>
+               `); // template 출력
 
             response.writeHead(200);
             response.end(template);
