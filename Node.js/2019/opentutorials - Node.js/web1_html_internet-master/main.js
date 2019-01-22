@@ -3,7 +3,7 @@ var fs = require('fs');
 var url = require('url');
 var qs = require('querystring');
 
-function templateHTML(title, list, body){
+function templateHTML(title, list, body, control){
   return `
     <!doctype html>
     <html>
@@ -14,7 +14,7 @@ function templateHTML(title, list, body){
     <body>
       <h1><a href="/">WEB</a></h1>
       ${list}
-      <a href="/create">create</a>
+      ${control}
       ${body}
     </body>
     </html>
@@ -38,25 +38,24 @@ var app = http.createServer(function(request,response){
     var queryData = url.parse(_url, true).query;
     var pathname = url.parse(_url, true).pathname;
 
-    if(pathname ==='/') {
+    if(pathname ==='/') { // When id is "undefined"
       if(queryData.id === undefined){
-
         fs.readdir('./data', function(error, filelist){
           var title = 'Welcome';
           var description = 'Hello, Node.js';
           var list = templateList(filelist);  // filelist 출력
-          var template = templateHTML(title, list, `<h2>${title}</h2><p>${description}</p>`); // template 출력
+          var template = templateHTML(title, list, `<h2>${title}</h2><p>${description}</p>`,`<a href="/create">create</a>`); // template 출력
 
           response.writeHead(200);
           response.end(template);
         });
 
-      } else {
+      } else { // When id is "not undefined"
         fs.readFile(`data/${queryData.id}`, 'utf8', function(err, description){
           fs.readdir('./data', function(error, filelist){
             var title = queryData.id;
             var list = templateList(filelist);  // filelist 출력
-            var template = templateHTML(title, list, `<h2>${title}</h2><p>${description}</p>`); // template 출력
+            var template = templateHTML(title, list, `<h2>${title}</h2><p>${description}</p>`,`<a href="/create">create</a> <a href="/update?=id=${title}">update</a>`); // template 출력
 
             response.writeHead(200);
             response.end(template);
