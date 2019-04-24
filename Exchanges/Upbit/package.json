@@ -5,6 +5,11 @@
   "author": "Cellularhacker",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "dev": "nodemon --exec sucrase-node src/index.ts",
+    "build": "rm -rf ./dist && sucrase src -d dist --transforms typescript,imports ",
+    "start": "node ./dist/index.js"
+  },
   "dependencies": {
     "@types/axios": "^0.14.0",
     "@types/express": "^4.16.1",
